@@ -1,0 +1,276 @@
+/* Estilos globales */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Botones animados */
+.boton {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boton:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.boton:active {
+    background-color: #1abc9c;
+    transform: scale(0.95);
+}
+
+/* Pagina 2*/
+/* Estilos para la galería */
+.galeria {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.imagen {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de las imágenes dentro de la galería */
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Animaciones para cada imagen */
+.animacion1 img {
+    animation: girar 5s infinite linear;
+}
+
+.animacion2 img {
+    animation: escalar 3s infinite alternate ease-in-out;
+}
+
+.animacion3 img {
+    animation: saltar 2s infinite ease;
+}
+
+.animacion4 img {
+    animation: desenfocar 4s infinite alternate ease-in-out;
+}
+
+.animacion5 img {
+    animation: desvanecer 6s infinite alternate ease-in-out;
+}
+
+/* Definición de animaciones */
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes escalar {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+@keyframes saltar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes desenfocar {
+    0% { filter: blur(0); }
+    100% { filter: blur(5px); }
+}
+
+@keyframes desvanecer {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/*Pagina 3*/
+
+/* Estilos para la tabla */
+.tabla {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tabla th, .tabla td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo de los encabezados */
+.tabla th {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Animación para los encabezados */
+.animacion-encabezado {
+    animation: parpadear 1.5s infinite alternate ease-in-out;
+}
+
+/* Definición de la animación de parpadeo */
+@keyframes parpadear {
+    0% { background-color: #3498db; color: white; }
+    100% { background-color: #2ecc71; color: black; }
+}
+
+/*Pagina 4*/
+
+/* Estilos para la página interactiva */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Animación para el texto */
+.texto-animado p {
+    font-size: 24px;
+    font-weight: bold;
+    animation: moverTexto 3s ease-in-out infinite;
+}
+
+/* Animación para mover el texto hacia arriba y abajo */
+@keyframes moverTexto {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Estilo y animación de las imágenes en movimiento */
+.imagenes-movimiento {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.imagen-movil {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    animation: moverImagen 4s ease-in-out infinite;
+}
+
+.imagen-movil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Animación para mover las imágenes */
+@keyframes moverImagen {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(150px); }
+    100% { transform: translateX(0); }
+}
+
+/* Estilo del enlace externo */
+.enlace-externo {
+    margin-top: 40px;
+}
+
+.enlace-externo a {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.enlace-externo a:hover {
+    background-color: #2ecc71;
+}
+
+/* Botones de navegación */
+.botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.boton {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boton:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.boton:active {
+    background-color: #1abc9c;
+    transform: scale(0.95);
+}
+
+
